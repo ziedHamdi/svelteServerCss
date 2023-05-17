@@ -3,6 +3,7 @@ export async function GET({ params }) {
 	let cssContent
 	console.log('responding to request for templateId : ', params);
 		cssContent = `
+		
 html, body {
     background-color: blue;
 }
@@ -12,5 +13,5 @@ div {
 `;
 	// Return the CSS content as a response
 
-	return new Response(cssContent, { headers: { 'Content-Type': 'text/html; charset=utf-8' } });
+	return new Response(cssContent, { headers: { 'Content-Type': 'text/css; charset=utf-8' } });
 }
